@@ -1,0 +1,22 @@
+<html lang="pl">
+    <head>
+    {% block head %}
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="wizytowka.css">
+        <title>Witaj na mojej stronie domowej!</title>
+    {% endblock %}
+    </head>
+    <body>
+        <h1>Witaj na mojej stronie domowej!</h1>
+        
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/JenniferAnistonHWoFFeb2012.jpg/360px-JenniferAnistonHWoFFeb2012.jpg" alt="Laptop screen with code" title="Code">
+    <div id="content">{%block content %}{% endblock %}</div>
+    <h2>O mnie</h2>
+<ul>
+    <li>imie: Jennifer</li>
+    <li>nazwisko: Aniston</li>
+</ul>
+    </body>
+    
+</html>
