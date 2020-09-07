@@ -1,25 +1,19 @@
-from flask import render_template
+from flask import Flask, render_template, request, redirect
 
-@app.route('/abase', methods=['GET'])
+app = Flask(__name__)
+
+@app.route('/my page/me', methods=['GET'])
 def abase():
-   if request.method == 'GET':
-       print("We received GET")
        return render_template("abase.html")
    
 
-@app.route('/about', methods=['GET'])
+@app.route('/my page/about', methods=['GET'])
 def about():
-   if request.method == 'GET':
-       print("We received GET")
        return render_template("about.html")
   
 
-@app.route('/contact', methods=['GET', 'POST'])
-def contact():
-   if request.method == 'GET':
-       print("We received GET")
-       return render_template("contact.html")
-   elif request.method == 'POST':
-       print("We received POST")
-       print(request.form)
-       return redirect("/")
+@app.route('/my page/contact', methods=['POST'])
+def display_contact():
+    data = request.form
+    print(data)
+       return redirect("/mypage/contact")
