@@ -2,8 +2,8 @@ from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
-@app.route('/mypage/me', methods=['GET'])
-def abase():
+@app.route('/mypage/contact', methods=['GET'])
+def contact():
     return render_template("contact.html")
    
 
