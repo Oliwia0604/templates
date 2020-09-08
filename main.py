@@ -17,3 +17,4 @@ def display_contact():
     data = request.form
     print(data)
     return redirect("/mypage/contact")
+    
